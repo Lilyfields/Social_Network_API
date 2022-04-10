@@ -1,56 +1,56 @@
-const mongoose =require ("mongoose");
-const { stringify } = require("querystring");
+const mongoose = require("mongoose");
+
 
 const UserSchema = new mongoose.Schema({
-    username:{
-        type:String,
-        required:true,
-        min:3,
-        max:20,
-        unique:true
-
-    },
-
-    email:{
-        type:String,
-        required:true,
-        max:50,
-        unique:true,
-    },
-
-    password:{
+    username: {
         type: String,
-        required: true, 
-        min:6,
+        required: true,
+        min: 3,
+        max: 20,
+        unique: true
+
     },
 
-    profilePicture:{
-        type:String,
-        default:""
+    email: {
+        type: String,
+        required: true,
+        max: 50,
+        unique: true,
     },
 
-    coverPicture:{
-        type:String,
-        default:""
+    password: {
+        type: String,
+        required: true,
+        min: 6,
     },
 
-    followers:{
-        type:Array,
-        default:[]
+    profilePicture: {
+        type: String,
+        default: ""
     },
 
-    followins:{
-        type:Array,
-        default:[],
+    coverPicture: {
+        type: String,
+        default: ""
     },
 
-    isAdmin:{
-        type:Boolean,
-        default:false,
+    followers: {
+        type: Array,
+        default: []
+    },
+
+    followins: {
+        type: Array,
+        default: [],
+    },
+
+    isAdmin: {
+        type: Boolean,
+        default: false,
     },
 },
 
-{timestamp:true}
+    { timestamp: true }
 
 );
 
